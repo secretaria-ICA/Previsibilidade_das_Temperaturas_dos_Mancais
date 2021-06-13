@@ -25,8 +25,8 @@ Após a coleta, são expurgadas todas as medições de temperatura do período e
 
 Com base nas medições de temperatura do dia anterior (temperatura a cada 5 minutos), é realizada a média do dia para cada mancal e em seguida armazenada em uma base de dados. Após o registro dessas médias os seguintes alertas são enviados por email:
 
-   1 - Desvio de 40% na temperatura do mancal em relação a média dos demais mancais do equipamento.<br/>
-   2 - Desvio de 20% na temperatura do mancal em relação a sua média semestral
+   * - Desvio de 40% na temperatura do mancal em relação a média dos demais mancais do equipamento.<br/>
+   * - Desvio de 20% na temperatura do mancal em relação a sua média semestral.
 
 ### OBJETIVO
 
