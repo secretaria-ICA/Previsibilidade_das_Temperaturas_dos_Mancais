@@ -34,8 +34,8 @@ Como foi apresentado acima, a média das temperaturas dos mancais é obtida apen
 
 Além de contribuir com o processo de manutenção industrial da Transpetro, pretendo com este projeto revisitar algumas das matérias ministradas no curso BI Master, são elas:
 
-LUI  - Localização do Uso da Informação
-CONF - Confiabilidade
-MEAD - Métodos Estatísticos
-DM   - Data Mining
-RN   - Redes Neurais
+LUI  - Localização do Uso da Informação \n
+CONF - Confiabilidade \n
+MEAD - Métodos Estatísticos \n
+DM   - Data Mining \n
+RN   - Redes Neurais \n
