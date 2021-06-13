@@ -1,7 +1,7 @@
 # PROJ-BI_MASTER
 Projeto Final do Curso CCE PUC-Rio - BI MASTER
 
-##CENÁRIO
+## CENÁRIO
 
 A Transpetro é uma empresa de logística da Petrobras e é responsável pelo transporte (dutoviário, rodoviário e por navios) e armazenamento de
 óleo, gás e derivados. A realização do transporte através de dutos requer a manutenção de diversos equipamentos, dentre eles, bombas, geradores,
@@ -28,7 +28,7 @@ Com base nas medições de temperatura do dia anterior (temperatura a cada 5 min
    1 - Desvio de 40% na temperatura do mancal em relação a média dos demais mancais do equipamento.
    2 - Desvio de 20% na temperatura do mancal em relação a sua média semestral
 
-##OBJETIVO
+## OBJETIVO
 
 Como foi apresentado acima, a média das temperaturas dos mancais é obtida apenas um dia após as medições realizadas pelos sensores. O objetivo deste trabalho é prever a temperatura desses mancais alguns dias a frente, assim os avisos poderiam ser disparados com antecedência, permitindo acionar com brevidade as equipes de manutenção que irão realizar a verificação em campo desses equipamentos.
 
