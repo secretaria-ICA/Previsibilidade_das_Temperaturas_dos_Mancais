@@ -1,5 +1,6 @@
 # PROJ-BI_MASTER
 Projeto Final do Curso CCE PUC-Rio - BI MASTER
+Previsão de Série Temporal da Temperatura de Mancais Utilizando LSTM
 
 ### CENÁRIO
 
@@ -33,3 +34,45 @@ Além de contribuir com o processo de manutenção industrial da Transpetro, pre
   * MEAD - Métodos Estatísticos<br/>
   * DM   - Data Mining<br/>
   * RN   - Redes Neurais
+
+### SOLUÇÃO
+
+EM CONSTRUÇÃO
+
+### 1. Extração dos dados do sistema supervisório
+
+  Para extração dos dados no sistema supervisário, utilizamos a interface de serviço REST disponibilizada pelo sistema. As extrações são realizadas diariamente em busca dos valores medidos no dia antetior. Para este projeto os valores a serem utilizados são:
+
+   * o **estado do mancal**, que indica se o mancal está ativo ou inativo e;
+   * a **temperatura do mancal**.
+
+A API REST utilizada para obteção dos valores acima é:
+  
+  https://<historianservername>:8443/historian-rest-api/v1/datapoints/interpolated?tagNames=[tagsName]&amp;start=[ontem-yyyy-MM-dd]T00:00:00.111Z&amp;end=[ontem-yyyy-MM-dd]T23:59:59.111Z&amp;count=0&amp;intervalMs=300000&amp;quality=3
+  
+onde,
+  
+  **[tagsName]** é o conjunto de tags no sistema supervisório, separdos por ";", que identificam os sensores a serem observados. Para este projeto utilizaremos os sensores de temperatura dos mancais dos equipamentos.
+  
+  **[ontem-yyyy-MM-dd]** é a data do dia anterior a execução do extrator de dados.
+  
+**Observação:** o parâmetro **intervalMs=300000** indica que o serviço REST trará o valor medido para cada intervalo de 5 seg. 
+  
+### 2. Cálculo da média diário
+
+  Com base nos resultados da extração para cada mancal, é verificado se em cada tempo de leitura (a cada 5 seg.) o estado do mancal é inativo, caso esteja inativo, aquela a leitura de temperatura do mesmo instante é desconsiderada.
+  
+  Ao final do processo de expurgo das temperaturas nos instantes em que um mancal se encontra inativo, é feita a média de temperatura do dia do mancal, que considera apenas as temperaturas dos instantes em que o mancal se encontrava ativo. Por exemplo:
+  
+  DATA/HORA           | Equipamento    | Mancal (Tag)          | Estado  | Temperatura
+  --------------------|----------------|-----------------------|---------|-------------
+  2021-06-12T00:00:05 | GE-4150.01001B | ECE1.G2-TI-MANC3.F_CV | ATIVO   | 50,00
+  2021-06-12T00:00:10 | GE-4150.01001B | ECE1.G2-TI-MANC3.F_CV | ATIVO   | 53,20
+  2021-06-12T00:00:15 | GE-4150.01001B | ECE1.G2-TI-MANC3.F_CV | ATIVO   | 52,20
+  2021-06-12T00:00:20 | GE-4150.01001B | ECE1.G2-TI-MANC3.F_CV | ATIVO   | 51,60
+  2021-06-12T00:00:25 | GE-4150.01001B | ECE1.G2-TI-MANC3.F_CV | ATIVO   | 55,20
+  **2021-06-12T00:00:30** | **GE-4150.01001B** | **ECE1.G2-TI-MANC3.F_CV** | **INATIVO** | **30,00**
+  **2021-06-12T00:00:35** | **GE-4150.01001B** | **ECE1.G2-TI-MANC3.F_CV** | **INATIVO** | **34,00**
+  2021-06-12T00:00:40 | GE-4150.01001B | ECE1.G2-TI-MANC3.F_CV | ATIVO   | 54,00
+  
+  Neste caso, a média da temperatura do dia **12/06/2021** para o mancal **ECE1.G2-TI-MANC3.F_CV** do equipamento **GE-4150.01001B** não consideraria as entradas dos tempos 00:00:30 e 00:00:35.
