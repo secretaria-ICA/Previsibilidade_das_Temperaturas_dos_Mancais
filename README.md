@@ -35,9 +35,7 @@ Além de contribuir com o processo de manutenção industrial da Transpetro, pre
   * DM   - Data Mining<br/>
   * RN   - Redes Neurais
 
-### SOLUÇÃO
-
-EM CONSTRUÇÃO
+### SOLUÇÃO (EM CONSTRUÇÃO)
 
 #### 1. Extração dos dados do sistema supervisório
 
