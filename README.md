@@ -6,7 +6,7 @@ Previsão de Série Temporal da Temperatura de Mancais Utilizando LSTM
 
 A Transpetro é uma empresa de logística da Petrobras e é responsável pelo transporte (dutoviário, rodoviário e por navios) e armazenamento de óleo, gás e derivados. A realização do transporte através de dutos requer a manutenção de diversos equipamentos, dentre eles, bombas, geradores, dutos, etc. Para que se mantenha a eficiência e segurança dos serviços, a Transpetro possui uma área de manutenção industrial que é responsável por garantir a saúde desses equipamentos.
 
-Dentro da área de manutenção industrial, existe uma equipe direcionada para o acompanhamento da situação dos equipamentos críticos, que são equipamentos onde a parada pode trazer perdas financeiras relevantes. O acompanhamento da saúde desses equipamentos é feito através da verificação de diversas variáveis  coletadas por sistema supervisório aliado a sensores e/ou por meio de atividades de medição realizadas por equipes técnicas em campo.
+Dentro da área de manutenção industrial, existe uma equipe direcionada para o acompanhamento da situação dos equipamentos críticos, que são equipamentos onde a parada pode trazer perdas financeiras relevantes. O acompanhamento da saúde desses equipamentos é feito através da verificação de diversas variáveis coletadas por sistema supervisório aliado a sensores e/ou por meio de atividades de medição realizadas por equipes técnicas em campo.
 
 Dentre os equipamentos acompanhados por esta área, os motores, as bombas e as turbinas possuem sensores para medir a temperatura de seus mancais.
 
@@ -97,19 +97,29 @@ onde,
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AND** A.SCDA_CD_TAG   = B.SCDA_CD_TAG</br>
 **WHERE** B.SCDA_CD_TPTAG **LIKE** 'TMP_MANC_%'</br> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AND** B.SCDA_CD_GRTAG = 'CTMP'</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AND** A.SCDA_CD_EQUIP **IN**  ( 'GE-4100.12001B' )</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**AND** A.SCDA_CD_EQUIP **IN**  ( 'C-4451.08001A' )</br>
 **ORDER BY** A.SCDA_CD_EQUIP, A.SCDA_CD_TAG, A.SCDA_DT_VALOR
   
-**Observação:** para este estudo, utilizaremos o equipamento **GE-4100.12001B** como piloto.
+**Observação:** para este estudo, utilizaremos o equipamento **C-4451.08001A**.
 
 O conjunto de dados que iremos trabalhar neste projeto terá o seguinte formato:
 
-EQUIPAMENTO    | MANCAL                | DATA       | TEMPERATURA
----------------|-----------------------|------------|--------------
-GE-4100.12001B | ECU1.G2-TI-MANCD.F_CV | 04/01/2021 |	659.03825
-GE-4100.12001B | ECU1.G2-TI-MANCD.F_CV | 05/01/2021	| 659.76301
-GE-4100.12001B | ECU1.G2-TI-MANCD.F_CV | 06/01/2021	| 649.72128
-GE-4100.12001B | ECU1.G2-TI-MANCD.F_CV | 07/01/2021	| 657.68837
-GE-4100.12001B | ECU1.G2-TI-MANCD.F_CV | 08/01/2021	| 660.11167
-GE-4100.12001B | ECU1.G2-TI-MANCD.F_CV | 09/01/2021	| 660.8411
-GE-4100.12001B | ECU1.G2-TI-MANCD.F_CV | 10/01/2021	| 663.60157
+EQUIPAMENTO   | MANCAL           | DATA       | TEMPERATURA
+--------------|------------------|------------|--------------
+C-4451.08001A | EJA1.A-TC21.F_CV | 04/01/2021 |	659.03825
+C-4451.08001A | EJA1.A-TC21.F_CV | 05/01/2021	| 659.76301
+C-4451.08001A | EJA1.A-TC21.F_CV | 06/01/2021	| 649.72128
+C-4451.08001A | EJA1.A-TC21.F_CV | 07/01/2021	| 657.68837
+C-4451.08001A | EJA1.A-TC21.F_CV | 08/01/2021	| 660.11167
+C-4451.08001A | EJA1.A-TC21.F_CV | 09/01/2021	| 660.8411
+C-4451.08001A | EJA1.A-TC21.F_CV | 10/01/2021	| 663.60157
+
+#### 4. Análise exploratória e preparação dos dados
+
+#### 5. Avaliação dos parâmetros da rede LSTM
+
+#### 6. Aplicação dos parâmetros selecionados para a rede LSTM
+
+#### 7. Verificação de desvios de temperatura
+
+#### 8. Conclusão
