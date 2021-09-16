@@ -130,7 +130,7 @@ C-4451.08001A | EJA1.A-TC21.F_CV | 09/01/2021	| 660.8411
 C-4451.08001A | EJA1.A-TC21.F_CV | 10/01/2021	| 663.60157
 
 
-#### 4. Análise exploratória e preparação dos dados
+#### 2.4. Análise exploratória e preparação dos dados
 
 ### 3. Resultados
 
