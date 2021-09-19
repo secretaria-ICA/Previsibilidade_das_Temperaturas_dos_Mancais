@@ -132,6 +132,8 @@ C-4451.08001A | EJA1.A-TC21.F_CV | 10/01/2021	| 663.60157
 
 #### 2.4. Análise exploratória e preparação dos dados
 
+A análise exploratória dos dados e a preparação podem ser encontradas no item do arquivo [Link para o código](https://github.com/1_AVAL_RN_TEMP_C-4451_08001A.ipynb)
+
 ### 3. Resultados
 
 #### 3.5. Avaliação dos parâmetros da rede LSTM
