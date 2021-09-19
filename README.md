@@ -151,6 +151,8 @@ min	  |18.718320
 75%	  |71.582280
 max	  |390.441750
 
+O problema a ser solucionado trata-se de uma previsão de série temporal, onde precisaremos identificar quais as temperaturas dos mancais nos próximos x dias. Para esse problema utilizaremos a arquitetura de redes neurais LSTM (Long Short Term Memory). 
+
 ### 3. Resultados
 
 #### 3.5. Avaliação dos parâmetros da rede LSTM
