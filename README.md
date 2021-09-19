@@ -6,8 +6,12 @@
 ---
 Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
 
-<!-- para os links a seguir, caso os arquivos estejam no mesmo repositório que este README, não há necessidade de incluir o link completo: basta incluir o nome do arquivo, com extensão, que o GitHub completa o link corretamente -->
-- [Link para o código](https://github.com/link_do_repositorio). <!-- caso não aplicável, remover esta linha -->
+Abaixo seguem os arquivos deste projeto:
+
+- [dataset_C-4451_08001A](dataset_C-4451_08001A.csv) - Dataset com as temperaturas de todos os mancais do equipamento C-4451_08001A.
+- [1_AVAL_RN_TEMP_C_4451_08001A](1_AVAL_RN_TEMP_C_4451_08001A.ipynb) - Notebook utilizado na fase de estudos com análise exploratória dos dados, preparação dos dados e testes com a LSTM.
+- [2_TESTA_PARAMETROS_RN](2_TESTA_PARAMETROS_RN.ipynb) - Notebook para geração de testes com combinação de parâmetros com o objetivo de identificar a melhor configuração para a LSTM.
+- [3_SALVA_MODELOS](3_SALVA_MODELOS.ipynb) - Notebook para geração do modelo de LSTM com base nos melhores parâmetros encontrados para cada Mancal.
 
 ---
 
@@ -132,7 +136,20 @@ C-4451.08001A | EJA1.A-TC21.F_CV | 10/01/2021	| 663.60157
 
 #### 2.4. Análise exploratória e preparação dos dados
 
-A análise exploratória dos dados e a preparação podem ser encontradas no item do arquivo [Link para o código](https://github.com/1_AVAL_RN_TEMP_C-4451_08001A.ipynb)
+A análise exploratória dos dados e a preparação podem ser encontradas na parte 1 e 2 do arquivo notebook [1_AVAL_RN_TEMP_C_4451_08001A](1_AVAL_RN_TEMP_C_4451_08001A.ipynb).
+
+Durante a análise exploratória obtivemos informações estatísticas sobre a base de dados trabalhada, como por exemplo, temos abaixo algumas estatísticas sobre as temperaturas dos mancais do equipamento C-4451.08001A:
+
+MEDIDA|TEMPERATURA
+------|------------
+count	|2245.000000
+mean	|64.265038
+std 	|16.315631
+min	  |18.718320
+25%	  |54.898560
+50%	  |59.504080
+75%	  |71.582280
+max	  |390.441750
 
 ### 3. Resultados
 
