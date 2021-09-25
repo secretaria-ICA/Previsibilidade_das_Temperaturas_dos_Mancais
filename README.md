@@ -12,7 +12,7 @@ Abaixo seguem os arquivos deste projeto:
 - [1_AVAL_RN_TEMP_C_4451_08001A](1_AVAL_RN_TEMP_C_4451_08001A.ipynb) - Notebook utilizado na fase de estudos com análise exploratória dos dados, preparação dos dados e testes com a LSTM.
 - [2_TESTA_PARAMETROS_RN](2_TESTA_PARAMETROS_RN.ipynb) - Notebook para geração de testes com combinação de parâmetros com o objetivo de identificar a melhor configuração para a LSTM.
 - [3_SALVA_MODELOS](3_SALVA_MODELOS.ipynb) - Notebook para geração do modelo de LSTM com base nos melhores parâmetros encontrados para cada Mancal.
-
+- [4_PREVER_TEMP_MANCAL](4_PREVER_TEMP_MANCAL.ipynb) - Notebook para previsão das próximas temperaturas com base no melhor modelo LSTM encontrado para cada mancal.
 ---
 
 ### Resumo
