@@ -153,6 +153,17 @@ max	  |390.441750
 
 O problema a ser solucionado trata-se de uma previsão de série temporal, onde precisaremos identificar quais as temperaturas dos mancais nos próximos x dias. Para esse problema utilizaremos a arquitetura de redes neurais LSTM (Long Short Term Memory). 
 
+**Obs.:** para utilização dos arquivos notebook será necessário criar a seguinte estrutura de pasta no Google Drive:
+
+- **Meu Drive/BI_MASTER/PROJETO_FINAL_BIMASTER/DATASETS** - Diretório onde se encontra o arquivo com os dados de temperatura dos mancais.
+- **Meu Drive/BI_MASTER/PROJETO_FINAL_BIMASTER/AVALIACAO_REDES** - Diretório com o resultado das avaliações das RNs geradas com os diversos parâmetros através do notebook [2_TESTA_PARAMETROS_RN](2_TESTA_PARAMETROS_RN.ipynb).  
+- **Meu Drive/BI_MASTER/PROJETO_FINAL_BIMASTER/MODELOS** - Diretório onde ficarão os modelos gerados com base nos parâmetros que tiveram as melhores avaliações. Este modelos são gerados através do notebook [3_SALVA_MODELOS](3_SALVA_MODELOS.ipynb).
+
+
+
+
+
+
 ### 3. Resultados
 
 #### 3.5. Avaliação dos parâmetros da rede LSTM
