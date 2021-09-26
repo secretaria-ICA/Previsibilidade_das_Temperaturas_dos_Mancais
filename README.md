@@ -54,7 +54,7 @@ Além de contribuir com o processo de manutenção industrial da Transpetro, pre
   * DM   - Data Mining<br/>
   * RN   - Redes Neurais
 
-### 2. Modelagem (EM CONSTRUÇÃO)
+### 2. Modelagem
 
 #### 2.1. Extração dos dados do sistema supervisório
 
@@ -160,13 +160,11 @@ O problema a ser solucionado trata-se de uma previsão de série temporal, onde 
 - **Meu Drive/BI_MASTER/PROJETO_FINAL_BIMASTER/MODELOS** - Diretório onde ficarão os modelos gerados com base nos parâmetros que tiveram as melhores avaliações. Este modelos são gerados através do notebook [3_SALVA_MODELOS](3_SALVA_MODELOS.ipynb).
 
 
-
-
-
-
 ### 3. Resultados
 
 #### 3.5. Avaliação dos parâmetros da rede LSTM
+
+Falar sobre a necessidade de adquirir o plano básico do Google Colab para que a aplicação pudesse rodar durante a madrugada e fazendo uso de GPU.
 
 #### 3.6. Aplicação dos parâmetros selecionados para a rede LSTM
 
