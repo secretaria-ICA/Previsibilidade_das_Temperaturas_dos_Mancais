@@ -167,14 +167,14 @@ Após a etapa de análise exploratória e preparação dos dados, foram aplicado
 
 Dado que o processo de teste individual dos diversos parâmetros da rede se demonstrou muito custoso, foi criado o notebook [2_TESTA_PARAMETROS_RN](2_TESTA_PARAMETROS_RN.ipynb) para geração dos testes baseados na combinação dos seguintes parâmetros adotados:
 
-windowSet   = [3,4,5,6]
-outputSet   = [2,3]
-layerSet    = [1,2,3]
-unitSet     = [[150,80,80],[120,60,40],[80,80,60]]
-dropoutSet  = [0.2, 0.25, 0.3, 0.35] 
-optmizerSet = ['Adam', 'Adadelta']
-epochs      = 800
-batch_size  = 32
+* windowSet   = [3,4,5,6]
+* outputSet   = [2,3]
+* layerSet    = [1,2,3]
+* unitSet     = [[150,80,80],[120,60,40],[80,80,60]]
+* dropoutSet  = [0.2, 0.25, 0.3, 0.35] 
+* optmizerSet = ['Adam', 'Adadelta']
+* epochs      = 800
+* batch_size  = 32
 
 A combinação desses parâmetros gerou **576 configurações** que foram aplicados à rede neural LSTM. Estes testes foram realizados para cada um dos mancais.
 
