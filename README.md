@@ -189,6 +189,8 @@ Métricas de avaliação utilizadas:
 
 #### 3.6. Aplicação dos parâmetros selecionados para a rede LSTM
 
+<Falar sobre a escolha da melhor configuração da rede de cada mancal.>
+
 #### 3.7. Verificação de desvios de temperatura
 
 ### 4. Conclusões
