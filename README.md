@@ -181,9 +181,9 @@ A combinação desses parâmetros gerou **576 configurações** que foram aplica
 Ao final da execução das 576 configurações para cada umm dos mancais, um arquivo do tipo CSV é gerado para cada mancal com o resultado de cada configuração, apresentado as métricas de avaliação **MSE, RMSE e MAPE**. O nome do arquivo segue o padrão **[NOME_EQUIPAMENTO]__[NOME_MANCAL]_results.csv**, por exemplo, C-4451.08001A__EJA1.A-TE1209B.F_CV_results.csv.
 
 Métricas de avaliação utilizadas:
-- MSE - Mean Squared Error
-- RMSE - Root Mean Squared Error
-- MAPE - Mean Absolute Percentage Error
+- **MSE** - Mean Squared Error
+- **RMSE** - Root Mean Squared Error
+- **MAPE** - Mean Absolute Percentage Error
 
 **Obs.:** por conta do tempo de processamento necessário para realizar os testes de cada combinação de parâmetros, foi necessário adquirir o plano básico do Google Colab para que a aplicação pudesse rodar durante a madrugada e fazendo uso de GPU. A versão gratuita do Google Colab reiniciava o serviço sempre às 0:00, impedindo a conclusão dos testes.
 
