@@ -159,12 +159,33 @@ O problema a ser solucionado trata-se de uma previsão de série temporal, onde 
 - **Meu Drive/BI_MASTER/PROJETO_FINAL_BIMASTER/AVALIACAO_REDES** - Diretório com o resultado das avaliações das RNs geradas com os diversos parâmetros através do notebook [2_TESTA_PARAMETROS_RN](2_TESTA_PARAMETROS_RN.ipynb).  
 - **Meu Drive/BI_MASTER/PROJETO_FINAL_BIMASTER/MODELOS** - Diretório onde ficarão os modelos gerados com base nos parâmetros que tiveram as melhores avaliações. Este modelos são gerados através do notebook [3_SALVA_MODELOS](3_SALVA_MODELOS.ipynb).
 
+Após a etapa de análise exploratória e preparação dos dados, foram aplicados alguns parâmetros em uma rede neural do tipo LSTM para testes sobre o conjunto de dados referente às temperaturas dos mancais do equipamento **C-4451.08001A**. Dentre os parâmetros testados, ficou bastante evidente que os optmizers **Adam e Adadelta** forneciam uma previsão mais próxima dos valores reais.
 
 ### 3. Resultados
 
 #### 3.5. Avaliação dos parâmetros da rede LSTM
 
-Falar sobre a necessidade de adquirir o plano básico do Google Colab para que a aplicação pudesse rodar durante a madrugada e fazendo uso de GPU.
+Dado que o processo de teste individual dos diversos parâmetros da rede se demonstrou muito custoso, foi criado o notebook [2_TESTA_PARAMETROS_RN](2_TESTA_PARAMETROS_RN.ipynb) para geração dos testes baseados na combinação dos seguintes parâmetros adotados:
+
+windowSet   = [3,4,5,6]
+outputSet   = [2,3]
+layerSet    = [1,2,3]
+unitSet     = [[150,80,80],[120,60,40],[80,80,60]]
+dropoutSet  = [0.2, 0.25, 0.3, 0.35] 
+optmizerSet = ['Adam', 'Adadelta']
+epochs      = 800
+batch_size  = 32
+
+A combinação desses parâmetros gerou **576 configurações** que foram aplicados à rede neural LSTM. Estes testes foram realizados para cada um dos mancais.
+
+Ao final da execução das 576 configurações para cada umm dos mancais, um arquivo do tipo CSV é gerado para cada mancal com o resultado de cada configuração, apresentado as métricas de avaliação **MSE, RMSE e MAPE**. O nome do arquivo segue o padrão **[NOME_EQUIPAMENTO]__[NOME_MANCAL]_results.csv**, por exemplo, C-4451.08001A__EJA1.A-TE1209B.F_CV_results.csv.
+
+Métricas de avaliação utilizadas:
+- MSE - Mean Squared Error
+- RMSE - Root Mean Squared Error
+- MAPE - Mean Absolute Percentage Error
+
+**Obs.:** por conta do tempo de processamento necessário para realizar os testes de cada combinação de parâmetros, foi necessário adquirir o plano básico do Google Colab para que a aplicação pudesse rodar durante a madrugada e fazendo uso de GPU. A versão gratuita do Google Colab reiniciava o serviço sempre às 0:00, impedindo a conclusão dos testes.
 
 #### 3.6. Aplicação dos parâmetros selecionados para a rede LSTM
 
