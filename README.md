@@ -195,7 +195,14 @@ O modelo é criado em uma pasta com o padrão de nomenclatura **[NOME_EQUIPAMENT
 
 #### 3.7. Verificação de desvios de temperatura
 
+Após cada mancal ter seu modelo produtivo da LSTM gerado, o notebook [4_PREVER_TEMP_MANCAL](4_PREVER_TEMP_MANCAL.ipynb) faz o carregamento desses modelos e aplica a previsão das temperaturas dos próximos 3 dias para cada mancal e faz a verificação dos testes abaixo:
+
+  * Desvio de 40% na temperatura do mancal em relação a média de todos mancais do equipamento no mesmo dia.
+  * Desvio de 20% na temperatura do mancal em relação a sua média semestral.
+
 ### 4. Conclusões
+
+
 
 ---
 
