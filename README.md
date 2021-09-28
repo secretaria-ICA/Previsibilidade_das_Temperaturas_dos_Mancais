@@ -202,7 +202,19 @@ Após cada mancal ter seu modelo produtivo da LSTM gerado, o notebook [4_PREVER_
 
 ### 4. Conclusões
 
+Neste trabalho objetivou-se pela apresentação de uma inteligência artificial capaz de oferecer previsibilidade sobre a temperatura dos mancais, pretendendo-se com isso a identificação de possíveis problemas nos equipamentos com maior antecedência.
 
+Na primeira parte do trabalho contextualizamos o problema e em seguida abordamos a fonte de dados necessária para ser utilizada em uma solução de IA.
+
+Realizamos em seguida uma análise exploratória dos dados visando conhecimento de algumas características estatísticas da base e também de volumetria e qualidade do dado. 
+
+Após a análise dos dados, iniciou-se o processo de busca por melhores parâmetros da RN LSTM que conseguissem representar melhor a variação dos dados reais. Neste ponto o processo de verificação dos parâmetros tornou-se muito custoso e acabou sendo necessário criar um programa para realização da testagem dos diversos parâmetros.
+
+Com base nos melhores parâmetros identificados, os modelos produtivos da RN de cada mancal foram armazenados para utilização pelo programa responsável pela verificação dos desvios de temperatura.
+
+Ao longo do trabalho pudemos observar o comportamento da temperatura dos mancais do equipamento **C-4451.08001A**, e ao aplicar os modelos produtivos das RNs para estes mancais, observamos desvios em 4 deles. 
+
+Será necessário manter um período de observação dessas redes neurais para avaliação de sua performance frente aos dados reais. Após validada esta prova de conceito, deverá ser preparada uma estrutura produtiva que contemple desde a leitura dos dados até a entrega visual dos resultados, e aplicação do rollout para os demais equipamentos.  
 
 ---
 
