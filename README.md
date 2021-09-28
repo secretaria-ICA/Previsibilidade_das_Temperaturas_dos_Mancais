@@ -214,7 +214,7 @@ Com base nos melhores parâmetros identificados, os modelos produtivos da RN de 
 
 Ao longo do trabalho pudemos observar o comportamento da temperatura dos mancais do equipamento **C-4451.08001A**, e ao aplicar os modelos produtivos das RNs para estes mancais, observamos desvios em 4 deles. 
 
-Será necessário manter um período de observação dessas redes neurais para avaliação de sua performance frente aos dados reais. Após validada esta prova de conceito, deverá ser preparada uma estrutura produtiva que contemple desde a leitura dos dados até a entrega visual dos resultados, e aplicação do rollout para os demais equipamentos.  
+Será necessário manter um período de observação dessas redes neurais para avaliação de sua performance frente aos dados reais. Após validada esta prova de conceito, deverá ser preparada uma estrutura produtiva que contemple desde a leitura dos dados até a entrega visual dos resultados, e a aplicação do rollout para os demais equipamentos.  
 
 ---
 
