@@ -189,7 +189,9 @@ Métricas de avaliação utilizadas:
 
 #### 3.6. Aplicação dos parâmetros selecionados para a rede LSTM
 
-<Falar sobre a escolha da melhor configuração da rede de cada mancal.>
+Com base nas métricas de avaliação das RNs geradas para cada mancal, o notebook [3_SALVA_MODELOS](3_SALVA_MODELOS.ipynb) verifica qual foi a melhor configuração para o mancal avaliado e então cria a RN com esta configuração para em seguida salvar o modelo produtivo no diretório **Meu Drive/BI_MASTER/PROJETO_FINAL_BIMASTER/MODELOS**.
+
+O modelo é criado em uma pasta com o padrão de nomenclatura **[NOME_EQUIPAMENTO]__[NOME_MANCAL]_model** que fica disponível para utilização pelo notebook [4_PREVER_TEMP_MANCAL](4_PREVER_TEMP_MANCAL.ipynb)
 
 #### 3.7. Verificação de desvios de temperatura
 
