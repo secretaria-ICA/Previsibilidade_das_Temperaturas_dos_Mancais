@@ -1,7 +1,7 @@
-# Previsibilidade das Temperaturas dos Mancais
+# Previsibilidade_das_Temperaturas_dos_Mancais
 
 #### Aluno: [Gustavo Brito](https://github.com/Gustavo-br-rj)
-#### Orientador: [Leonardo Mendonza](https://github.com/link_do_github).
+#### Orientador: [Leonardo Mendonza](https://github.com/leofome8).
 
 ---
 Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
